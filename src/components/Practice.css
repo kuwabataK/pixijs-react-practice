@@ -1,0 +1,17 @@
+.stage {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -320px;
+    margin-top: -180px;
+    width: 640px;
+    height: 360px;
+    background: #34363c;
+    overflow: hidden;
+  }
+  
+  .stage canvas {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
