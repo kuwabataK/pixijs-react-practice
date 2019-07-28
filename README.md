@@ -1,5 +1,12 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## About
+
+pixi.jsをReact with TypeScriptで動かす練習用のリポジトリです
+
+以下のURLのコードを参考に実装していきます。
+https://ryo620.org/2016/12/pixijs-game-01/
+
 ## Available Scripts
 
 In the project directory, you can run:
