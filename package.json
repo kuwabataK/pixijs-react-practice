@@ -34,5 +34,8 @@
       "last 1 safari version"
     ]
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "spritesmith-cli": "^1.1.2",
+    "spritesmith-texturepacker": "^1.0.0"
+  }
 }

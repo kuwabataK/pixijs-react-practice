@@ -5,7 +5,7 @@ import * as PIXI from 'pixi.js';
 
 class Practice extends React.Component {
   myRef: React.RefObject<HTMLDivElement>;
-  view: HTMLCanvasElement | null= null
+  view: HTMLCanvasElement | null = null
 
   constructor(props: any) {
     super(props);
@@ -18,7 +18,7 @@ class Practice extends React.Component {
   componentDidMount() {
     // Didmount後にPIXIを登録
     if (!this.myRef.current) return
-    this.view = this.pixiAnimation() || null
+    this.view = this.pixiAnimation()
   }
 
   componentWillUnmount() {
@@ -29,7 +29,7 @@ class Practice extends React.Component {
   }
 
   pixiAnimation() {
-    if (!this.myRef.current) return
+    if (!this.myRef.current) return null
     /**
   * STEP.1 元となるコンテナを用意。画面に描画される要素は全てこの下にぶら下がる
   */
