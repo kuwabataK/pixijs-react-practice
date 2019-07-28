@@ -23,23 +23,19 @@ class Practice extends React.Component {
 
   componentWillUnmount() {
     if (!this.myRef.current) return
-    if (this.view){
-        this.myRef.current.removeChild(this.view)
+    if (this.view) {
+      this.myRef.current.removeChild(this.view)
     }
   }
 
   pixiAnimation() {
     if (!this.myRef.current) return null
-    /**
-  * STEP.1 元となるコンテナを用意。画面に描画される要素は全てこの下にぶら下がる
-  */
-    const stage = new PIXI.Container();
 
     /**
      * STEP.2 描画するためのレンダラーを用意。引数は描画領域の幅、高さ、オプション
      */
-    const renderer = PIXI.autoDetectRenderer({
-      width: 640, 
+    const app = new PIXI.Application({
+      width: 640,
       height: 360,
       antialias: true,     // アンチエイリアスをONに
       backgroundColor: 0x00ffd4, // 背景色
@@ -49,36 +45,30 @@ class Practice extends React.Component {
     /**
      * STEP.3 #stage のDOM要素に view を追加
      */
-    this.myRef.current.appendChild(renderer.view);
+    this.myRef.current.appendChild(app.view);
 
-    /**
-     * animation関数を定義
-     */
-    const animation = () => {
-      // 再帰的に次のアニメーションフレームで animation関数を呼び出す
-      requestAnimationFrame(animation);
-
-      // 描画
-      renderer.render(stage);
-    };
-
-    /**
-     * animation関数を呼び出す
-     */
-    animation();
-    var ttrGirl = PIXI.Texture.from(character);
+    const ttrGirl = PIXI.Texture.from(character);
 
     /**
      * テクスチャからスプライトを生成する
      */
-    var sprGirl = new PIXI.Sprite(ttrGirl);
-  
+    const sprGirl = new PIXI.Sprite(ttrGirl);
+    sprGirl.anchor.set(0.5)
+    // move the sprite to the center of the screen
+    sprGirl.x = app.screen.width / 2;
+    sprGirl.y = app.screen.height / 2;
+
     /**
      * スプライトを、コンテナであるstageの子要素として追加する
      */
-    stage.addChild(sprGirl);
+    app.stage.addChild(sprGirl);
 
-    return renderer.view
+    app.ticker.add(() => {
+      // 女の子を回転させる
+      sprGirl.rotation += 0.1;
+  });
+
+    return app.view
   }
 
   render() {
