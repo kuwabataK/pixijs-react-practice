@@ -47,12 +47,14 @@ class Practice extends React.Component {
      */
     this.myRef.current.appendChild(app.view);
 
-    const ttrGirl = PIXI.Texture.from(character);
 
     /**
+     * 女の子の画像を読み込み
      * テクスチャからスプライトを生成する
      */
+    const ttrGirl = PIXI.Texture.from(character);
     const sprGirl = new PIXI.Sprite(ttrGirl);
+    // 回転座標の中心を指定（画像の中心にする）
     sprGirl.anchor.set(0.5)
     // move the sprite to the center of the screen
     sprGirl.x = app.screen.width / 2;
