@@ -7,6 +7,8 @@ pixi.jsをReact with TypeScriptで動かす練習用のリポジトリです
 以下のURLのコードを参考に実装していきます。
 https://ryo620.org/2016/12/pixijs-game-01/
 
+DEMO: https://kuwabatak.github.io/pixijs-react-practice/
+
 ## Available Scripts
 
 In the project directory, you can run:
