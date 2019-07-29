@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "dbf51c4e3c3deee1e9d1fa63ff1ebf29",
+    "revision": "c97dfeda8df24e725951997489c5e1cc",
     "url": "/pixijs-react-practice/index.html"
   },
   {
-    "revision": "6476a4766403faab4788",
+    "revision": "50c11dcc62f3415b5624",
     "url": "/pixijs-react-practice/static/css/main.23579723.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/pixijs-react-practice/static/js/2.4eea6892.chunk.js"
   },
   {
-    "revision": "6476a4766403faab4788",
-    "url": "/pixijs-react-practice/static/js/main.3b4a7226.chunk.js"
+    "revision": "50c11dcc62f3415b5624",
+    "url": "/pixijs-react-practice/static/js/main.51499b18.chunk.js"
   },
   {
     "revision": "63599156740fce77080b",
